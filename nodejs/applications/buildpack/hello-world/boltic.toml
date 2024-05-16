@@ -1,0 +1,17 @@
+#
+# See https://docs.boltic.io/docs/compute/serverless/application-config for information about how to use this file.
+#
+
+app = "nodejs-buildpack-app-sample"
+region = "asia-south1"
+entrpoint = "index.js"
+
+[build]
+  buildpack_builder = "paketobuildpacks/builder-jammy-base"
+  buildpacks = ["paketo-buildpacks/nodejs"]
+  ignorefile = ".gitignore"
+  [build.args]
+    foo = "bar"
+
+[env]
+  FOO = "BAR"

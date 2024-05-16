@@ -1,0 +1,19 @@
+#
+# See https://docs.boltic.io/docs/compute/serverless/application-config for information about how to use this file.
+#
+
+app = "golang-buildpack-func-sample"
+region = "asia-south1"
+handler = "handler.handler"
+
+[build]
+  buildpack_builder = "paketobuildpacks/builder-jammy-base"
+  buildpacks = ["paketo-buildpacks/go"]
+  ignorefile = ".gitignore"
+  
+  [build.args]
+    param1 = "value1"
+    param2 = "value2"
+
+[env]
+  FOO = "BAR"
