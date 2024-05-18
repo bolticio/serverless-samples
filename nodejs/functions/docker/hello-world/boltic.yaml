@@ -1,0 +1,17 @@
+#
+# See https://docs.boltic.io/docs/compute/serverless/application-config for information about how to use this file.
+#
+
+app: nodejs-dockerfile-func-sample
+region: asia-south1
+handler: index.handler
+
+build:
+  builtin: dockerfile
+  ignorefile: .gitignore
+  args:
+    param1: value1
+    param2: value2
+
+env:
+  FOO: BAR
