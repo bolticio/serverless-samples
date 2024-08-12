@@ -1,0 +1,17 @@
+#
+# See https://docs.boltic.io/docs/compute/serverless/application-config for information about how to use this file.
+#
+
+app = "java-buildpack-app-sample"
+region = "asia-south1"
+entrypoint = "java/applications/buildpack/hello-world/src/main/java/com/boltic/io/serverless/AutogenIndex.java"
+
+[build]
+  buildpack_builder = "paketobuildpacks/builder-jammy-base"
+  buildpacks = ["paketo-buildpacks/java"]
+  ignorefile = ".gitignore"
+  [build.args]
+    foo = "bar"
+
+[env]
+  FOO = "BAR"

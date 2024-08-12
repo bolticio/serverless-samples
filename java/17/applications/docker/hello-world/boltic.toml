@@ -1,0 +1,15 @@
+#
+# See https://docs.boltic.io/docs/compute/serverless/application-config for information about how to use this file.
+#
+
+app = "java-dockerfile-app-sample"
+region = "asia-south1"
+
+[build]
+  dockerfile = "Dockerfile"
+  ignorefile = ".gitignore"
+  [build.args]
+    foo = "bar"
+
+[env]
+  FOO = "BAR"
