@@ -4,7 +4,7 @@
 
 app = "java-buildpack-app-sample"
 region = "asia-south1"
-entrypoint = "java/applications/buildpack/hello-world/src/main/java/com/boltic/io/serverless/AutogenIndex.java"
+entrypoint = "src/main/java/com/boltic/io/serverless/AutogenIndex.java"
 
 [build]
   buildpack_builder = "paketobuildpacks/builder-jammy-base"
