@@ -1,0 +1,11 @@
+#
+# See https://docs.boltic.io/docs/compute/serverless/application-config for information about how to use this file.
+#
+
+app = "nodejs-dockerfile-func-telegram-bot"
+region = "asia-south1"
+handler = "handler.handler"
+
+[build]
+  builtin = "dockerfile"
+  ignorefile = ".gitignore"
